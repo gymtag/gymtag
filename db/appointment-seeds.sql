@@ -1,6 +1,6 @@
 use gym_db;
 
-INSERT INTO Appointments (userName, month, day, time, am_pm, gym, photo, RookieUserName, ExpertUserName) VALUES ("rdavis", "9", "18", "1", "pm", "1234", "https://i.ytimg.com/vi/AzNb6KCok9o/hqdefault.jpg", NULL, "rdavis");
+INSERT INTO Appointments (userName, month, day, time, am_pm, gym, photo, RookieUserName, ExpertUserName) VALUES ("rdavis", "9", "18", "1", "pm", "1234", "http://s2.dmcdn.net/KXGeE/320x180-DbQ.jpg", NULL, "rdavis");
 INSERT INTO Appointments (userName, month, day, time, am_pm, gym, photo, RookieUserName, ExpertUserName) VALUES ("jgarcia", "9", "18", "2", "pm", "1234", "http://wobblefit.com/wp-content/uploads/2017/06/day-38-intense-abs-core-workout-320x180.jpg", NULL, "jgarcia");
 INSERT INTO Appointments (userName, month, day, time, am_pm, gym, photo, RookieUserName, ExpertUserName) VALUES ("psmith", "9", "18", "3", "pm", "1234", "https://thevirallist.us/wp-content/uploads/2017/08/478859478-318x180.jpg", NULL, "psmith");
 INSERT INTO Appointments (userName, month, day, time, am_pm, gym, photo, RookieUserName, ExpertUserName) VALUES ("plee", "9", "18", "4", "pm", "1234", "http://thebikinibuilders.com/wp-content/uploads/2017/05/killer-lower-ab-workout-320x180.jpg", NULL, "plee");

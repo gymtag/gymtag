@@ -1,6 +1,6 @@
 use gym_db;
 
-INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Ralph", "Davis", "rdavis", "Expert", "https://i.ytimg.com/vi/AzNb6KCok9o/hqdefault.jpg", "1234");
+INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Ralph", "Davis", "rdavis", "Expert", "http://s2.dmcdn.net/KXGeE/320x180-DbQ.jpg", "1234");
 INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Jessica", "Garcia", "jgarcia", "Expert", "http://wobblefit.com/wp-content/uploads/2017/06/day-38-intense-abs-core-workout-320x180.jpg", "1234");
 INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Pei", "Smith", "psmith", "Expert", "https://thevirallist.us/wp-content/uploads/2017/08/478859478-318x180.jpg", "1234");
 INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Piper", "Lee", "plee", "Expert", "http://thebikinibuilders.com/wp-content/uploads/2017/05/killer-lower-ab-workout-320x180.jpg", "1234");
