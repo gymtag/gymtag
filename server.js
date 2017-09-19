@@ -31,12 +31,8 @@ require("./routes/appointments-api-routes.js")(app);
 require("./routes/expert-api-routes.js")(app);
 require("./routes/rookie-api-routes.js")(app);
 
-
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-
-
-
 var callback;
 
 exports.app = app;

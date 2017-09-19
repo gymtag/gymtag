@@ -1,7 +1,3 @@
-
-
-
-
 $(document).ready(function(){
   
     var firstNameField = $(".firstNameField");
@@ -34,12 +30,12 @@ $(document).ready(function(){
       
       console.log(newRookie);
       submitPost(newRookie);
-    }
+    };
 
     function submitPost(post){
       $.post("/rookie", post, function(){
           window.location.href = "/rookie-schedule?rookie_id=" + post.userName + "&gym_id=" + post.gym;
       });
     }
-})
+});
 

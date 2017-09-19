@@ -32,13 +32,12 @@ $(document).ready(function(){
             time: hourField.val().trim(),
         };
         
-        console.log(newexpert);
         submitPost(newexpert);
-      }
+      };
   
       function submitPost(post){
         $.post("/setappointment", post, function(){
             window.location.href = "/expert-schedule?expert_id=" + post.userName + "&gym_id=" + post.gym;
         });
-      }
-  })
+      };
+  });

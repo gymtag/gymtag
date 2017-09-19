@@ -19,11 +19,8 @@ $(document).ready(function() {
     }
 
     function getAppointments(rookie){
-        console.log("rookie2:" + rookie);
         rookieId = rookie || "";
-        console.log("rookieId2:" + rookieId);
         $.get("/appointments/" + rookieId, function(data){
-            console.log("Appointments", data);
             appointments = data;
             userWelcome(rookie);
             if (!appointments || !appointments.length) {

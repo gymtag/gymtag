@@ -9,24 +9,18 @@ $(document).ready(function() {
     if (url.indexOf("?expert_id=") !== -1 && url.indexOf("&gym_id=") !== -1) {
     expertId = url.split("=")[1].split("&")[0];
     gymId = url.split("=")[2];
-    console.log(expertId);
-    console.log(gymId);
     getReservations(expertId, gymId);
 
-    }
-    else {
+    } else {
     getReservations();
-    }
+    };
 
     function getReservations(expert, gym){
         console.log("expert:" + expert);
         console.log("gym:" + gym);
         expertId = expert || "";
         gymId = gym || "";
-        console.log("expertId:" + expertId);
-        console.log("gymId:" + gymId);
         $.get("/appointments/expert/" + expertId+ "/"+ gymId , function(data){
-            console.log("Reservations", data);
             reservations = data;
             if (!reservations || !reservations.length) {
                 displayEmpty(expert);
@@ -35,7 +29,7 @@ $(document).ready(function() {
             initializeRows();
             }
         });
-    }
+    };
 
     function initializeRows(){
         resContainer.empty();
@@ -44,7 +38,7 @@ $(document).ready(function() {
             resToAdd.push(createNewOption(reservations[i]));
         }
         resContainer.append(resToAdd);
-    }
+    };
 
 function createNewOption(reservation){
     var newCardDeck = $("<div class='card-deck'>");
@@ -82,4 +76,4 @@ function displayEmpty(id) {
     messageh2.html("No Scheduled Appointments yet" + partial);
     appointmentContainer.append(messageh2);
     }   
-})
+});

@@ -10,20 +10,16 @@ $(document).ready(function() {
         var expertId;
         if (url.indexOf("?expert_id=") !== -1) {
           expertId = url.split("=")[1].split("&")[0];
-          console.log(expertId);
           getAppointments(expertId);
     
         }
         else {
           getAppointments();
-        }
+        };
     
         function getAppointments(expert){
-            console.log("expert2:" + expert);
             expertId = expert || "";
-            console.log("expertId2:" + expertId);
             $.get("/appointments/" + expertId, function(data){
-                console.log("Appointments", data);
                 appointments = data;
                 userWelcome(expert);
                 if (!appointments || !appointments.length) {
@@ -41,7 +37,7 @@ $(document).ready(function() {
             messageh1.css({ "text-align": "center", "margin-top": "50px" });
             messageh1.text("Welcome: " + id + "!");
             user.prepend(messageh1);
-        }
+        };
     
         function showAppointments(){
             appointmentContainer.empty();

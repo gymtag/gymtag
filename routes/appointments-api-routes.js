@@ -18,12 +18,10 @@ module.exports = function(app) {
     });
 
     app.get("/appointments/rookie/:username/:gymId", function(req, res) {
-        console.log("THIS IS MY REQ:" + req.params.gymId + "" + req.params.username);
         db.Appointments.findAll({
           where: {
             RookieUserName: null,
             gym: req.params.gymId,
-            // userName: !req.params.username
           },
         }).then(function(results) {
           res.json(results);
@@ -31,12 +29,10 @@ module.exports = function(app) {
       });
 
       app.get("/appointments/expert/:username/:gymId", function(req, res) {
-        console.log("THIS IS MY REQ:" + req.params.gymId + "" + req.params.username);
         db.Appointments.findAll({
           where: {
             ExpertUserName: null,
             gym: req.params.gymId,
-            // userName: !req.params.username
           },
         }).then(function(results) {
           res.json(results);
@@ -44,7 +40,6 @@ module.exports = function(app) {
       });
 
       app.get("/appointments/:username", function(req, res) {
-        console.log("THIS IS MY Appointments REQ:" + req.params.username);
         db.Appointments.findAll({
           where: {
             userName: req.params.username,
@@ -53,15 +48,4 @@ module.exports = function(app) {
           res.json(results);
         });
       });
-
-    //   app.get("/appointments/:username", function(req, res) {
-    //     console.log("THIS IS MY Appointments REQ:" + req.params.username);
-    //     db.Appointments.findAll({
-    //       where: {
-    //         userName: req.params.username,
-    //       },
-    //     }).then(function(results) {
-    //       res.json(results);
-    //     });
-    //   });
 };

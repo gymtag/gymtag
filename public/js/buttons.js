@@ -15,9 +15,6 @@ $(".loginButton").on("click", function(event){
 
 var username = $(".username");
 var newLoginButton = $(".newLoginButton");
-// $(newLoginButton).on("submit", handleFormSubmit);
-
-
 
 function handleFormSubmit(event){
 
@@ -26,9 +23,7 @@ function handleFormSubmit(event){
 	var returningUser = {
 		username: username.val().trim()
 	}
-
-	console.log(returningUser);
-}
+};
 
 function submitPost(post){
 	$(".newLoginButton").on("click", function(event) {
@@ -49,7 +44,7 @@ function submitPost(post){
 		}
 	});
   }
-})
+});
 
 $(".newUserButton").on("click", function(event){
 	event.preventDefault();

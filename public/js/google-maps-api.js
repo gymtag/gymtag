@@ -1,8 +1,4 @@
-// This example requires the Places library. Include the libraries=places
-      // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-      function initMap() {
+    function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 33.640633386601, lng: -117.8445053100586},
           zoom: 12
@@ -16,15 +12,10 @@
 
         var autocomplete = new google.maps.places.Autocomplete(input);
 
-        // Bind the map's bounds (viewport) property to the autocomplete object,
-        // so that the autocomplete requests use the current map bounds for the
-        // bounds option in the request.
         autocomplete.bindTo('bounds', map);
 
         var infowindow = new google.maps.InfoWindow();
-        console.log(infowindow);
         var infowindowContent = document.getElementById('infowindow-content');
-        console.log(infowindowContent);
         infowindow.setContent(infowindowContent);
         var marker = new google.maps.Marker({
           map: map,
@@ -68,12 +59,11 @@
           infowindow.open(map, marker);
         });
 
-        // Sets a listener on a radio button to change the filter type on Places
-        // Autocomplete.
+
         function setupClickListener(id, types) {
           var radioButton = document.getElementById(id);
           radioButton.addEventListener('click', function() {
             autocomplete.setTypes(types);
           });
-        }
-      }
+        };
+      };
