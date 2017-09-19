@@ -25,5 +25,4 @@ INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES
 INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Jenna", "Philips", "jphilips", "Expert", "http://media.womanista.com/2017/01/woman-flexing-51490-320x180.jpg", "1234");
 INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Sally", "Ellis", "sellis", "Expert", "http://1v1d1e1lmiki1lgcvx32p49h8fe.wpengine.netdna-cdn.com/wp-content/uploads/2017/04/workout-320x180.jpg", "1234");
 
-
 SELECT * FROM gym_db.Experts;

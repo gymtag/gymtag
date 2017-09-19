@@ -1,54 +1,75 @@
 $(document).ready(function(){
-$(".loginInput").hide();
-$(".beginnerOrPro").hide();
-$(".loginButton").on("click", function(event){
-   	$(".newUserButton").hide();
-   	$(".loginInput").show();
-   	$(".newUserOrLogin").addClass("login");
-   	$(".login").removeClass("newUserOrLogin");
-   	$(".loginButton").addClass("newLoginButton");
-   	$(".newLoginButton").removeClass("loginButton");
-   	handleFormSubmit(event);   	
-	submitPost();
-});
-
-
-var username = $(".username");
-var newLoginButton = $(".newLoginButton");
-// $(newLoginButton).on("submit", handleFormSubmit);
-
-
-
-function handleFormSubmit(event){
-
-	event.preventDefault();
-
-	var returningUser = {
-		username: username.val().trim()
+	$(".loginInput").hide();
+	$(".beginnerOrPro").hide();
+	$(".loginButton").on("click", function(event){
+		$(".newUserButton").hide();
+		$(".loginInput").show();
+		$(".newUserOrLogin").addClass("login");
+		$(".login").removeClass("newUserOrLogin");
+		$(".loginButton").addClass("newLoginButton");
+		$(".newLoginButton").removeClass("loginButton");
+		start(event);  	
+	});
+	
+	function start(event){
+		$(".newLoginButton").on("click", function(event){
+			handleFormSubmit(event);
+		});
 	}
 
-	console.log(returningUser);
-}
+	var userName = $(".username");
+	var gymIdField = $(".gymIdField");
+	
+	// var newLoginButton = $(".newLoginButton");
+	// $(newLoginButton).on("submit", handleFormSubmit);
 
-function submitPost(post){
-	$(".newLoginButton").on("click", function(event) {
-		var expertRadio = document.getElementById("expert");
-		var rookieRadio = document.getElementById("rookie");
+
+
+	function handleFormSubmit(event){
+		console.log("Event" + event.userName);
+		event.preventDefault();
+
+		var returningUser = {
+			userName: userName.val().trim(),
+			gym: gymIdField.val().trim()
+		}
 		
-		if (rookieRadio.checked) {
-			console.log("rookie radio checked!");
-			window.location.href = "/rookie-schedule?rookie_id=" + post.username;
-		}
-		if (expertRadio.checked) {
-			console.log("expert radio checked!");
-			window.location.href = "/expert-schedule?expert_id=" + post.username;
-		}
 
-		if (!username.val().trim() || !expertRadio.checked && !rookieRadio.checked) {
-			alert("Please fill out all the fields.")
-		}
-	});
-  }
+		console.log(returningUser);
+		submitPost(returningUser);
+	}
+
+	function submitPost(post){
+		$(".newLoginButton").on("click", function(event) {
+			var expertRadio = document.getElementById("expert");
+			var rookieRadio = document.getElementById("rookie");
+			
+			if (rookieRadio.checked) {
+				console.log("rookie radio checked!");
+				// $.get("/appointments/" + post.userName, function(data){
+				// 	console.log("Appointments", data);
+				// 	appointments = data;
+				// 	userWelcome(rookie);
+				// 	if (!appointments || !appointments.length) {
+		
+				// 		displayEmpty(rookie);
+				// 	}
+				// 	else {
+				// 		showAppointments();
+				// 	}  
+				// })
+				window.location.href = "/rookie-schedule?rookie_id=" + post.userName + "&gym_id=" + post.gym;
+			}
+			if (expertRadio.checked) {
+				console.log("expert radio checked!");
+				window.location.href = "/expert-schedule?expert_id=" + post.userName;
+			}
+
+			if (!userName.val().trim() || !expertRadio.checked && !rookieRadio.checked) {
+				alert("Please fill out all the fields.")
+			}
+		});
+	}
 })
 
 $(".newUserButton").on("click", function(event){

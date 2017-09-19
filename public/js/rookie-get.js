@@ -80,6 +80,6 @@ $(document).ready(function() {
     var messageh2 = $("<h2>");
     messageh2.css({ "text-align": "center", "margin-top": "50px" });
     messageh2.html("No Scheduled Appointments yet" + partial);
-    appointmentContainer.append(messageh2);
+    resContainer.append(messageh2);
   }
 })
