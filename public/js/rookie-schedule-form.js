@@ -32,13 +32,12 @@ $(document).ready(function(){
           time: hourField.val().trim(),
       };
       
-      console.log(newRookie);
       submitPost(newRookie);
-    }
+    };
 
     function submitPost(post){
       $.post("/setappointment", post, function(){
           window.location.href = "/rookie-schedule?rookie_id=" + post.userName + "&gym_id=" + post.gym;
       });
     }
-})
+});

@@ -28,16 +28,15 @@ $(document).ready(function(){
           userType: "Expert"
       };
 
-      console.log(newExpert);  
       submitPost(newExpert);
-    }
+    };
 
     function submitPost(post){
       $.post("/expert", post, function(){
           window.location.href = "/expert-schedule?expert_id=" + post.userName + "&gym_id=" + post.gym;
       });
-    }
-})
+    };
+});
 
 
 

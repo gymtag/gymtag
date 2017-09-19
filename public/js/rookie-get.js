@@ -9,8 +9,6 @@ $(document).ready(function() {
     if (url.indexOf("?rookie_id=") !== -1 && url.indexOf("&gym_id=") !== -1) {
       rookieId = url.split("=")[1].split("&")[0];
       gymId = url.split("=")[2];
-      console.log(rookieId);
-      console.log(gymId);
       getReservations(rookieId, gymId);
 
     }
@@ -19,8 +17,6 @@ $(document).ready(function() {
     }
 
     function getReservations(rookie, gym){
-        console.log("rookie:" + rookie);
-        console.log("gym:" + gym);
         rookieId = rookie || "";
         gymId = gym || "";
         console.log("rookieId:" + rookieId);
@@ -35,7 +31,7 @@ $(document).ready(function() {
             initializeRows();
             }
         });
-    }
+    };
 
     function initializeRows(){
         resContainer.empty();
@@ -82,4 +78,4 @@ $(document).ready(function() {
     messageh2.html("No Scheduled Appointments yet" + partial);
     resContainer.append(messageh2);
   }
-})
+});

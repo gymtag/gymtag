@@ -24,13 +24,14 @@
     "automock": false,
     "verbose": true,
     "collectCoverageFrom": [
-        "routes/html-routes.js"
+      "routes/html-routes.js"
     ],
     "collectCoverage": true
   },
   "homepage": "https://github.com/gymtag/gymtag#readme",
   "dependencies": {
     "body-parser": "^1.18.0",
+    "cool-ascii-faces": "1.3.4",
     "express": "^4.15.4",
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.9",
