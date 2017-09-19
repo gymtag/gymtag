@@ -64,4 +64,20 @@ module.exports = function(app) {
     //       res.json(results);
     //     });
     //   });
-};
+
+  //   app.put("/appointments/rookie/usr/:username/appt/:apptId", function(req, res) 
+  //   {
+  //     console.log("THIS IS MY REQ: " + req.params.username + "" + req.params.apptId);
+  //     db.Appointments.update({
+  //     where: {
+  //          RookieUserName: null,
+  //          gym: req.params.gymId,
+  //          id: apptId,
+  //                  // userName: !req.params.username
+  //                },
+  //              }).then(function(results) {
+  //                 res.json(results);
+  //             });
+
+  //   });
+  }
