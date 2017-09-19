@@ -53,18 +53,7 @@ module.exports = function(app) {
           res.json(results);
         });
       });
-
-    //   app.get("/appointments/:username", function(req, res) {
-    //     console.log("THIS IS MY Appointments REQ:" + req.params.username);
-    //     db.Appointments.findAll({
-    //       where: {
-    //         userName: req.params.username,
-    //       },
-    //     }).then(function(results) {
-    //       res.json(results);
-    //     });
-    //   });
-
+    }
   //   app.put("/appointments/rookie/usr/:username/appt/:apptId", function(req, res) 
   //   {
   //     console.log("THIS IS MY REQ: " + req.params.username + "" + req.params.apptId);
@@ -80,4 +69,4 @@ module.exports = function(app) {
   //             });
 
   //   });
-  }
+  
