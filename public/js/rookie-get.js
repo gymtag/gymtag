@@ -11,10 +11,9 @@ $(document).ready(function() {
       gymId = url.split("=")[2];
       getReservations(rookieId, gymId);
 
-    }
-    else {
+    }else {
       getReservations();
-    }
+    };
 
     function getReservations(rookie, gym){
         rookieId = rookie || "";

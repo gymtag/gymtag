@@ -46,23 +46,11 @@ $(document).ready(function(){
 			
 			if (rookieRadio.checked) {
 				console.log("rookie radio checked!");
-				// $.get("/appointments/" + post.userName, function(data){
-				// 	console.log("Appointments", data);
-				// 	appointments = data;
-				// 	userWelcome(rookie);
-				// 	if (!appointments || !appointments.length) {
-		
-				// 		displayEmpty(rookie);
-				// 	}
-				// 	else {
-				// 		showAppointments();
-				// 	}  
-				// })
 				window.location.href = "/rookie-schedule?rookie_id=" + post.userName + "&gym_id=" + post.gym;
 			}
 			if (expertRadio.checked) {
 				console.log("expert radio checked!");
-				window.location.href = "/expert-schedule?expert_id=" + post.userName;
+				window.location.href = "/expert-schedule?expert_id=" + post.userName + "&gym_id=" + post.gym;
 			}
 
 			if (!userName.val().trim() || !expertRadio.checked && !rookieRadio.checked) {
